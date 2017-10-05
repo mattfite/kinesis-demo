@@ -9,7 +9,7 @@ phases:
       - echo files `find .`
   post_build:
     commands:
-      - aws cloudformation package --template-file deploy.yaml --s3-bucket codepipeline-us-west-2-815414172204 --output-template-file NewSamTemplate.yaml
+      - aws cloudformation package --template-file deploy.yaml --s3-bucket www.zrofux.com --output-template-file NewSamTemplate.yaml
 artifacts:
   type: zip
   files:
