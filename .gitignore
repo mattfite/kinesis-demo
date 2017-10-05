@@ -1,0 +1,17 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+target/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+.DS_Store
