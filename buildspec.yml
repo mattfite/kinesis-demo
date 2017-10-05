@@ -4,7 +4,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - echo $CODEBUILD_SRC_DIR
       - mvn package
+      - echo files `find .`
+  post_build:
+    commands:
       - aws cloudformation package --template-file deploy.yaml --s3-bucket codepipeline-us-west-2-815414172204 --output-template-file NewSamTemplate.yaml
 artifacts:
   type: zip
