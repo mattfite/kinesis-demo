@@ -7,6 +7,7 @@ phases:
       - mvn package
       - aws cloudformation package --template-file deploy.yaml --s3-bucket codepipeline-us-west-2-815414172204 --output-template-file NewSamTemplate.yaml
 artifacts:
+  type: zip
   files:
       - target/lambda-java-example-1.0-SNAPSHOT.jar
       - NewSamTemplate.yaml
